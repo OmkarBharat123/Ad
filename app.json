@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "RajEnterprises",
-    "slug": "RajEnterprises",
+    "name": "AdminPanel",
+    "slug": "AdminPanel",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,18 +18,19 @@
       "supportsTablet": true
     },
     "android": {
-      "buildType": "apk",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "output": "server",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
-        "projectId": "09da6ac2-11bf-421d-8e43-7be68f3b8780"
+        "projectId": "eff852ff-b866-440b-8b1b-a4129337b374"
       }
     }
   }

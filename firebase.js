@@ -1,10 +1,12 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getStorage, ref } from "firebase/storage";
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDM7TphLfyp5ClfiEdEC_JOQ6jTBvIszgs",
   authDomain: "adminpanal-84e6c.firebaseapp.com",
-  databaseURL: "https://adminpanal-84e6c-default-rtdb.firebaseio.com",
   projectId: "adminpanal-84e6c",
   storageBucket: "adminpanal-84e6c.appspot.com",
   messagingSenderId: "1052688828458",
@@ -13,6 +15,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const analytics = getAnalytics(app);
+const storage=getStorage(app)
 
-export { auth };

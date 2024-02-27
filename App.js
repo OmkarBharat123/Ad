@@ -1,34 +1,17 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import Dashboard from './Dashboard';
 
-import Login from './screens/Login';
-import Stock from './screens/Stock';
-import Profile from './Profile';
-
-const Stack = createStackNavigator();
-
-function App() {
+export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{ headerShown: false }}
-        />
-    
-        <Stack.Screen
-          name="Stock"
-          component={Stock}
-          options={{ headerShown: false }}
-        />
-                <Stack.Screen name="Profile" component={Profile}   options={{ headerShown: false }} />
-
-        
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+   <Dashboard/>
+    </View>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex:1
+  },
+});
